@@ -1,0 +1,32 @@
+// نموذج بيانات اللغز الواحد:
+// id: معرف فريد
+// type: "text" | "image" | "audio"
+// question: نص السؤال
+// media: اسم الصورة أو الصوت (اختياري)
+// choices: الاختيارات
+// answer: الجواب الصحيح
+// difficulty: "easy" | "medium" | "hard"
+
+export const riddles = [
+  { id:"r1", type:"text", question:"شنو هو الشي اللي كلما زدتي فيه نقصانه؟", choices:["الحفرة","الماء","الوقت","الرمل"], answer:"الحفرة", difficulty:"easy" },
+  { id:"r2", type:"image", question:"شنو هاد الحيوان؟", media:"lion.png", choices:["أسد","نمر","فهد","ذئب"], answer:"أسد", difficulty:"easy" },
+  { id:"r19", type:"image", question:"شنو هاد الحيوان؟", media:"owl.png", choices:["بومة","غراب","نسر","حمامة"], answer:"بومة", difficulty:"easy" },
+  { id:"r20", type:"image", question:"شنو هاد الحيوان؟", media:"fox.png", choices:["ثعلب","كلب","ذئب","قط"], answer:"ثعلب", difficulty:"medium" },
+  { id:"r21", type:"image", question:"شنو هاد الحيوان؟", media:"elephant.png", choices:["فيل","خرتيت","فرس النهر","جاموس"], answer:"فيل", difficulty:"easy" },
+  { id:"r3", type:"audio", question:"شنو هاد الصوت اللي سمعتي؟", media:"riddle_sound_1.mp3", choices:["قطة","كلب","طير","بقرة"], answer:"قطة", difficulty:"medium" },
+  { id:"r4", type:"text", question:"شي حاجة عندها أسنان ومكتعضش، شنو هي؟", choices:["المشط","السيف","الثعبان","الكلب"], answer:"المشط", difficulty:"easy" },
+  { id:"r5", type:"text", question:"كنطير بلا جناح، وكنبكي بلا عين، شكون أنا؟", choices:["السحاب","الطائرة","الطائر","الريح"], answer:"السحاب", difficulty:"medium" },
+  { id:"r6", type:"text", question:"شي بيت ماعندوش أبواب ولا شبابيك، شنو هو؟", choices:["البيضة","الصندوق","الكهف","الخيمة"], answer:"البيضة", difficulty:"easy" },
+  { id:"r7", type:"text", question:"كلما شربت منو، زاد عطشك... شنو هو؟", choices:["ماء البحر","الشاي","العصير","الحليب"], answer:"ماء البحر", difficulty:"medium" },
+  { id:"r8", type:"text", question:"شنو هو الشي اللي عندو مدينة وماعندوش دور؟", choices:["الخريطة","الكتاب","الهاتف","الحاسوب"], answer:"الخريطة", difficulty:"medium" },
+  { id:"r9", type:"text", question:"كيمشي بلا رجلين وكيبكي بلا عينين، شكون أنا؟", choices:["الساعة","السحاب","الريح","النهر"], answer:"الساعة", difficulty:"hard" },
+  { id:"r10", type:"text", question:"شي حاجة زادت الأرض ونقصات السما، شنو هي؟", choices:["حفرة","شجرة","بحيرة","جبل"], answer:"حفرة", difficulty:"hard" },
+  { id:"r11", type:"text", question:"عندو ورق وماشي شجرة، عندو صفحات وماشي كتاب، شنو هو؟", choices:["الدفتر","المصحف","الجريدة","التقويم"], answer:"التقويم", difficulty:"hard" },
+  { id:"r12", type:"text", question:"شنو هو الشي اللي كيبان لك مرة وحدة فاليوم، مرتين فالأسبوع، ومرة فالسنة؟", choices:["حرف الحاء","الشمس","القمر","النجوم"], answer:"حرف الحاء", difficulty:"hard" },
+  { id:"r13", type:"text", question:"شي حاجة كتخدم غير مرة وحدة فحياتها، شنو هي؟", choices:["الكبريت","المفتاح","القلم","السكين"], answer:"الكبريت", difficulty:"medium" },
+  { id:"r14", type:"text", question:"شنو هو الشي اللي عندو عين وماشوفش؟", choices:["الإبرة","العاصفة","الكاميرا","الجبل"], answer:"الإبرة", difficulty:"easy" },
+  { id:"r15", type:"text", question:"شنو هو الشي اللي كيموت إلا شرب الماء؟", choices:["النار","الثلج","الملح","الورق"], answer:"النار", difficulty:"easy" },
+  { id:"r16", type:"text", question:"عندي رجلين ومنمشيش، شكون أنا؟", choices:["الكرسي","الطاولة","السرير","الباب"], answer:"الكرسي", difficulty:"easy" },
+  { id:"r17", type:"text", question:"شنو هو الشي اللي كيكبر وهو مقلوب؟", choices:["الرقم 6 مقلوب لـ 9","الشجرة","الجبل","الظل"], answer:"الرقم 6 مقلوب لـ 9", difficulty:"hard" },
+  { id:"r18", type:"text", question:"شحال من شهر فيه 28 يوم؟", choices:["كلهم","واحد غير","شهرين","تلاتة"], answer:"كلهم", difficulty:"medium" },
+];
