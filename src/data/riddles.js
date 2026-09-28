@@ -1,12 +1,3 @@
-// نموذج بيانات اللغز الواحد:
-// id: معرف فريد
-// type: "text" | "image" | "audio"
-// question: نص السؤال
-// media: اسم الصورة أو الصوت (اختياري)
-// choices: الاختيارات
-// answer: الجواب الصحيح
-// difficulty: "easy" | "medium" | "hard"
-
 export const riddles = [
   { id:"r1", type:"text", question:"شنو هو الشي اللي كلما زدتي فيه نقصانه؟", choices:["الحفرة","الماء","الوقت","الرمل"], answer:"الحفرة", difficulty:"easy" },
   { id:"r2", type:"image", question:"شنو هاد الحيوان؟", media:"lion.png", choices:["أسد","نمر","فهد","ذئب"], answer:"أسد", difficulty:"easy" },
