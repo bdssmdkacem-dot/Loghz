@@ -1,0 +1,3 @@
+{
+  "expo":{"name":"لعبة الألغاز","slug":"riddle-game","version":"1.0.0","orientation":"portrait","icon":"./assets/images/icon.png","userInterfaceStyle":"light","splash":{"image":"./assets/images/splash.png","resizeMode":"contain","backgroundColor":"#1E1B4B"},"assetBundlePatterns":["**/*"],"android":{"package":"com.riddlegame.app","adaptiveIcon":{"foregroundImage":"./assets/images/adaptive-icon.png","backgroundColor":"#1E1B4B"}},"extra":{"eas":{"projectId":"REPLACE_WITH_YOUR_EAS_PROJECT_ID"}}}
+}
