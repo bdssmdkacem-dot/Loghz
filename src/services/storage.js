@@ -43,6 +43,10 @@ export async function recordGameResult(score, total) {
 
 export async function resetStats() {
   try {
-    await AsyncStorage.multiRemove([KEYS.BEST_SCORE, KEYS.BEST_TOTAL, KEYS.GAMES_PLAYED]);
+    await AsyncStorage.multiRemove([
+      KEYS.BEST_SCORE,
+      KEYS.BEST_TOTAL,
+      KEYS.GAMES_PLAYED,
+    ]);
   } catch (e) {}
 }
