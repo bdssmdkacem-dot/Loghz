@@ -4,7 +4,7 @@ export const riddles = [
   { id:"r19", type:"image", question:"شنو هاد الحيوان؟", media:"owl.png", choices:["بومة","غراب","نسر","حمامة"], answer:"بومة", difficulty:"easy" },
   { id:"r20", type:"image", question:"شنو هاد الحيوان؟", media:"fox.png", choices:["ثعلب","كلب","ذئب","قط"], answer:"ثعلب", difficulty:"medium" },
   { id:"r21", type:"image", question:"شنو هاد الحيوان؟", media:"elephant.png", choices:["فيل","خرتيت","فرس النهر","جاموس"], answer:"فيل", difficulty:"easy" },
-  { id:"r3", type:"audio", question:"شنو هاد الصوت اللي سمعتي؟", media:"riddle_sound_1.mp3", choices:["قطة","كلب","طير","بقرة"], answer:"قطة", difficulty:"medium" },
+  { id:"r3", type:"text", question:"حيوان كيقول مياو وكيحب يلعب بالخيط، شكون هو؟", choices:["قطة","كلب","طير","بقرة"], answer:"قطة", difficulty:"medium" },
   { id:"r4", type:"text", question:"شي حاجة عندها أسنان ومكتعضش، شنو هي؟", choices:["المشط","السيف","الثعبان","الكلب"], answer:"المشط", difficulty:"easy" },
   { id:"r5", type:"text", question:"كنطير بلا جناح، وكنبكي بلا عين، شكون أنا؟", choices:["السحاب","الطائرة","الطائر","الريح"], answer:"السحاب", difficulty:"medium" },
   { id:"r6", type:"text", question:"شي بيت ماعندوش أبواب ولا شبابيك، شنو هو؟", choices:["البيضة","الصندوق","الكهف","الخيمة"], answer:"البيضة", difficulty:"easy" },
