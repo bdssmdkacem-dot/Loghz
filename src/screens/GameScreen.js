@@ -1,22 +1,64 @@
 import React, { useState, useRef, useEffect } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, ScrollView, Animated } from "react-native";
+import Svg, { Circle, Ellipse, Path, Polygon } from "react-native-svg";
 import * as Haptics from "expo-haptics";
 import { riddles as riddleBank } from "../data/riddles";
 import { recordGameResult } from "../services/storage";
 
+function AnimalArt({ media }) {
+ const kind = media.replace(".png", "");
+ if (kind === "lion") return <Svg width={168} height={168} viewBox="0 0 180 180">
+  <Circle cx="90" cy="91" r="69" fill="#C87527" />
+  {[0,45,90,135,180,225,270,315].map((angle,i)=><Ellipse key={i} cx={90+Math.cos(angle*Math.PI/180)*60} cy={91+Math.sin(angle*Math.PI/180)*60} rx="13" ry="19" transform={`rotate(${angle} ${90+Math.cos(angle*Math.PI/180)*60} ${91+Math.sin(angle*Math.PI/180)*60})`} fill={i%2?"#D9903D":"#B96521"}/>)}
+  <Circle cx="90" cy="88" r="48" fill="#F8C77E" />
+  <Circle cx="72" cy="78" r="6" fill="#38251E" /><Circle cx="108" cy="78" r="6" fill="#38251E" />
+  <Ellipse cx="90" cy="100" rx="23" ry="17" fill="#FFE7B7" />
+  <Path d="M82 94 Q90 87 98 94 L90 103 Z" fill="#4A2A24" />
+  <Path d="M90 103 Q88 116 78 115 M90 103 Q92 116 102 115" fill="none" stroke="#75452E" strokeWidth="3" strokeLinecap="round"/>
+  <Path d="M47 98 L67 102 M46 108 L67 108 M133 98 L113 102 M134 108 L113 108" stroke="#A66A3A" strokeWidth="2.5" strokeLinecap="round"/>
+  <Circle cx="55" cy="48" r="10" fill="#F5C16C"/><Circle cx="125" cy="48" r="10" fill="#F5C16C"/>
+ </Svg>;
+ if (kind === "owl") return <Svg width={168} height={168} viewBox="0 0 180 180">
+  <Path d="M38 67 L29 27 L66 49 Q90 36 114 49 L151 27 L142 67 Q155 89 145 125 Q132 157 90 161 Q48 157 35 125 Q25 89 38 67Z" fill="#7762B5"/>
+  <Ellipse cx="90" cy="108" rx="42" ry="46" fill="#F5DDA8"/>
+  <Circle cx="67" cy="79" r="23" fill="#FFF8E9"/><Circle cx="113" cy="79" r="23" fill="#FFF8E9"/>
+  <Circle cx="69" cy="80" r="10" fill="#3E315F"/><Circle cx="111" cy="80" r="10" fill="#3E315F"/>
+  <Circle cx="72" cy="76" r="3" fill="#FFFFFF"/><Circle cx="114" cy="76" r="3" fill="#FFFFFF"/>
+  <Polygon points="90,89 79,102 101,102" fill="#E79B3B"/>
+  <Path d="M56 119 Q73 108 90 123 Q107 108 124 119" fill="none" stroke="#D4B77C" strokeWidth="4" strokeLinecap="round"/>
+  <Path d="M62 151 L58 162 M118 151 L122 162" stroke="#E79B3B" strokeWidth="6" strokeLinecap="round"/>
+ </Svg>;
+ if (kind === "fox") return <Svg width={168} height={168} viewBox="0 0 180 180">
+  <Path d="M35 78 L26 22 L72 48 Q90 40 108 48 L154 22 L145 78 Q153 117 90 153 Q27 117 35 78Z" fill="#E87832"/>
+  <Path d="M37 41 L62 55 L43 69 Z M143 41 L118 55 L137 69 Z" fill="#F7C5A0"/>
+  <Path d="M49 91 Q49 68 72 68 Q90 74 90 100 Q72 120 49 91Z" fill="#FFF3E6"/>
+  <Path d="M131 91 Q131 68 108 68 Q90 74 90 100 Q108 120 131 91Z" fill="#FFF3E6"/>
+  <Circle cx="68" cy="83" r="5" fill="#3A2924"/><Circle cx="112" cy="83" r="5" fill="#3A2924"/>
+  <Path d="M65 105 Q90 119 115 105 Q108 139 90 141 Q72 139 65 105Z" fill="#FFF7EF"/>
+  <Polygon points="82,109 98,109 90,119" fill="#3A2924"/>
+  <Path d="M90 119 L90 127" stroke="#7A3C25" strokeWidth="2.5" strokeLinecap="round"/>
+ </Svg>;
+ if (kind === "elephant") return <Svg width={168} height={168} viewBox="0 0 180 180">
+  <Ellipse cx="52" cy="93" rx="30" ry="39" fill="#6D9BB4"/>
+  <Ellipse cx="128" cy="93" rx="30" ry="39" fill="#6D9BB4"/>
+  <Ellipse cx="52" cy="93" rx="19" ry="27" fill="#A7CAD8"/>
+  <Ellipse cx="128" cy="93" rx="19" ry="27" fill="#A7CAD8"/>
+  <Circle cx="90" cy="83" r="49" fill="#8AB6C9"/>
+  <Path d="M77 109 Q70 131 85 144 Q98 154 107 138 Q112 127 105 115" fill="#8AB6C9" stroke="#6D9BB4" strokeWidth="3" strokeLinecap="round"/>
+  <Circle cx="72" cy="78" r="5.5" fill="#253B4B"/><Circle cx="108" cy="78" r="5.5" fill="#253B4B"/>
+  <Circle cx="74" cy="76" r="2" fill="#FFFFFF"/><Circle cx="110" cy="76" r="2" fill="#FFFFFF"/>
+  <Path d="M69 111 Q58 99 59 118 Q63 129 75 126 M111 111 Q122 99 121 118 Q117 129 105 126" fill="#FFF4D6" stroke="#E4D6B6" strokeWidth="2"/>
+  <Path d="M86 146 L86 153 M101 145 L101 152" stroke="#6D9BB4" strokeWidth="4" strokeLinecap="round"/>
+ </Svg>;
+ return <Svg width={168} height={168} viewBox="0 0 180 180}><Circle cx="90" cy="90" r="55" fill="#B9B0F4"/><Path d="M60 100 L78 82 L94 98 L120 69" stroke="#FFFFFF" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" fill="none"/></Svg>;
+}
 function AnimalIllustration({ media }) {
- const emoji = animalEmoji[media] || "🧩";
  const backgroundColor = animalColors[media] || "#EEECFF";
- return <View style={[styles.animalIllustration, { backgroundColor }]}><View style={styles.animalSparkle}><Text style={styles.animalSparkleText}>✦</Text></View><Text style={styles.animalEmoji}>{emoji}</Text><Text style={styles.animalCaption}>خمن الحيوان</Text></View>;
+ return <View style={[styles.animalIllustration, { backgroundColor }]}><View style={styles.animalSparkle}><Text style={styles.animalSparkleText}>✦</Text></View><AnimalArt media={media}/><Text style={styles.animalCaption}>خمن الحيوان</Text></View>;
 }
 
 function shuffleArray(array){const copy=[...array];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
 
-const animalEmoji = {
-  "lion.png": "🦁", "tiger.png": "🐯", "cheetah.png": "🐆", "wolf.png": "🐺",
-  "cat.png": "🐱", "dog.png": "🐶", "elephant.png": "🐘", "owl.png": "🦉",
-  "rabbit.png": "🐰", "fox.png": "🦊", "bear.png": "🐻", "monkey.png": "🐵"
-};
 const animalColors = {
   "lion.png": "#FFF0C2", "tiger.png": "#FFE4CC", "cheetah.png": "#FCE7D0",
   "wolf.png": "#E6EAF4", "cat.png": "#FCE7F3", "dog.png": "#FDECC8",
@@ -49,7 +91,7 @@ const styles=StyleSheet.create({
  question:{color:"#252443",fontSize:23,lineHeight:33,fontWeight:"900",textAlign:"center",marginBottom:20,paddingHorizontal:4},
  typeBadge:{fontSize:23,marginBottom:10,overflow:"hidden",backgroundColor:"#EEECFF",borderRadius:14,padding:9},
  animalIllustration:{width:220,height:220,borderRadius:28,marginBottom:23,alignItems:"center",justifyContent:"center",borderWidth:1,borderColor:"#E9EAF3",overflow:"hidden"},
- animalEmoji:{fontSize:94},
+ 
  animalSparkle:{position:"absolute",top:15,right:18},
  animalSparkleText:{fontSize:23,color:"#8B79C9"},
  animalCaption:{position:"absolute",bottom:13,color:"#6E688B",fontSize:11,fontWeight:"800"},
