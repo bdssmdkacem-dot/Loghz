@@ -32,6 +32,8 @@ for (const line of lines) {
     if (key) media.add(key);
   }
 }
+const r12 = lines.find(line => /id:"r12"/.test(line)) || "";
+check(r12.includes("القرن") && r12.includes("الدقيقة") && r12.includes("الساعة") && r12.includes('answer:"حرف القاف"'), "r12 letter-count riddle must use the correct words and answer");
 const game = read("src/screens/GameScreen.js");
 for (const key of media) check(game.includes(JSON.stringify(key) + ":"), "Missing animal illustration mapping: " + key);
 check(game.includes("choiceCorrectText") && game.includes("choiceWrongText"), "Answer result text contrast styles are missing");
