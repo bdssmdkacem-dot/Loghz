@@ -1,10 +1,9 @@
 import React, { useState, useCallback } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, ScrollView, Image } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, ScrollView } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { riddles } from "../data/riddles";
 import { getStats } from "../services/storage";
 
-const lion = require("../../assets/images/animals/lion.png");
 
 export default function HomeScreen({ navigation }) {
   const [stats, setStats] = useState({ bestScore: 0, bestTotal: 0, gamesPlayed: 0 });
@@ -29,7 +28,7 @@ export default function HomeScreen({ navigation }) {
             <Text style={styles.subtitle}>ألغاز ممتعة تختبر ملاحظتك وسرعة بديهتك.</Text>
           </View>
           <View style={styles.artHalo}>
-            <Image source={lion} style={styles.heroImage} resizeMode="contain" />
+            <Text style={styles.heroAnimal}>🦁</Text>
             <View style={styles.sparkleOne}><Text style={styles.sparkleText}>✦</Text></View>
             <View style={styles.sparkleTwo}><Text style={styles.sparkleText}>✧</Text></View>
           </View>
@@ -87,7 +86,7 @@ const styles = StyleSheet.create({
   title: { color: "#FFFFFF", fontSize: 26, lineHeight: 36, fontWeight: "900", textAlign: "left" },
   subtitle: { color: "#C8C7E4", fontSize: 12, lineHeight: 20, marginTop: 10, textAlign: "left" },
   artHalo: { position: "absolute", right: -15, bottom: 4, width: "53%", height: 190, borderRadius: 95, backgroundColor: "#393665", alignItems: "center", justifyContent: "center" },
-  heroImage: { width: "100%", height: "100%" },
+  heroAnimal: { fontSize: 100, textAlign: "center", textShadowColor: "rgba(0,0,0,0.12)", textShadowOffset: { width: 0, height: 6 }, textShadowRadius: 8 },
   sparkleOne: { position: "absolute", top: 3, left: 17 },
   sparkleTwo: { position: "absolute", bottom: 22, right: 15 },
   sparkleText: { color: "#F9C66A", fontSize: 24, fontWeight: "900" },
