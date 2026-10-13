@@ -5,7 +5,13 @@ import * as Haptics from "expo-haptics";
 import { riddles as riddleBank } from "../data/riddles";
 import { recordGameResult } from "../services/storage";
 
-function AnimalIllustration({ media }) {\n const emoji = animalEmoji[media] || "🧩";\n const backgroundColor = animalColors[media] || "#EEECFF";\n return <View style={[styles.animalIllustration, { backgroundColor }]}><View style={styles.animalSparkle}><Text style={styles.animalSparkleText}>✦</Text></View><Text style={styles.animalEmoji}>{emoji}</Text><Text style={styles.animalCaption}>خمن الحيوان</Text></View>;\n}\n\nfunction shuffleArray(array){const copy=[...array];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
+function AnimalIllustration({ media }) {
+ const emoji = animalEmoji[media] || "🧩";
+ const backgroundColor = animalColors[media] || "#EEECFF";
+ return <View style={[styles.animalIllustration, { backgroundColor }]}><View style={styles.animalSparkle}><Text style={styles.animalSparkleText}>✦</Text></View><Text style={styles.animalEmoji}>{emoji}</Text><Text style={styles.animalCaption}>خمن الحيوان</Text></View>;
+}
+
+function shuffleArray(array){const copy=[...array];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
 
 const animalEmoji = {
   "lion.png": "🦁", "tiger.png": "🐯", "cheetah.png": "🐆", "wolf.png": "🐺",
@@ -45,7 +51,11 @@ const styles=StyleSheet.create({
  progressBarFill:{height:"100%",backgroundColor:"#675BE7",borderRadius:5},
  question:{color:"#252443",fontSize:23,lineHeight:33,fontWeight:"900",textAlign:"center",marginBottom:20,paddingHorizontal:4},
  typeBadge:{fontSize:23,marginBottom:10,overflow:"hidden",backgroundColor:"#EEECFF",borderRadius:14,padding:9},
- animalIllustration:{width:220,height:220,borderRadius:28,marginBottom:23,alignItems:"center",justifyContent:"center",borderWidth:1,borderColor:"#E9EAF3",overflow:"hidden"},\n animalEmoji:{fontSize:94},\n animalSparkle:{position:"absolute",top:15,right:18},\n animalSparkleText:{fontSize:23,color:"#8B79C9"},\n animalCaption:{position:"absolute",bottom:13,color:"#6E688B",fontSize:11,fontWeight:"800"},
+ animalIllustration:{width:220,height:220,borderRadius:28,marginBottom:23,alignItems:"center",justifyContent:"center",borderWidth:1,borderColor:"#E9EAF3",overflow:"hidden"},
+ animalEmoji:{fontSize:94},
+ animalSparkle:{position:"absolute",top:15,right:18},
+ animalSparkleText:{fontSize:23,color:"#8B79C9"},
+ animalCaption:{position:"absolute",bottom:13,color:"#6E688B",fontSize:11,fontWeight:"800"},
  audioButton:{backgroundColor:"#675BE7",paddingVertical:13,paddingHorizontal:24,borderRadius:17,marginBottom:22},
  audioButtonText:{color:"#FFFFFF",fontSize:15,fontWeight:"800"},
  choices:{width:"100%",marginTop:4},
