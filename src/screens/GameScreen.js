@@ -50,7 +50,7 @@ function AnimalArt({ media }) {
   <Path d="M69 111 Q58 99 59 118 Q63 129 75 126 M111 111 Q122 99 121 118 Q117 129 105 126" fill="#FFF4D6" stroke="#E4D6B6" strokeWidth="2"/>
   <Path d="M86 146 L86 153 M101 145 L101 152" stroke="#6D9BB4" strokeWidth="4" strokeLinecap="round"/>
  </Svg>;
- return <Svg width={168} height={168} viewBox="0 0 180 180}><Circle cx="90" cy="90" r="55" fill="#B9B0F4"/><Path d="M60 100 L78 82 L94 98 L120 69" stroke="#FFFFFF" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" fill="none"/></Svg>;
+ return <Svg width={168} height={168} viewBox="0 0 180 180"><Circle cx="90" cy="90" r="55" fill="#B9B0F4"/><Path d="M60 100 L78 82 L94 98 L120 69" stroke="#FFFFFF" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" fill="none"/></Svg>;
 }
 function AnimalIllustration({ media }) {
  const backgroundColor = animalColors[media] || "#EEECFF";
