@@ -25,17 +25,23 @@ for (const line of lines) {
   ids.add(id);
   const choices = [...block.matchAll(/"([^"]+)"/g)].map(match => match[1]);
   check(choices.length >= 2 && choices.includes(answer), id + " has invalid choices or answer");
-  check(["easy", "medium", "hard"].includes(difficulty), id + " has invalid difficulty");
+  check([ "easy", "medium", "hard" ].includes(difficulty), id + " has invalid difficulty");
   if (type === "image") {
     const key = line.match(/media:"([^"]+)"/)?.[1];
     check(Boolean(key), id + " is missing animal media");
     if (key) media.add(key);
   }
 }
-const r12 = lines.find(line => /id:"r12"/.test(line)) || "";
-check(r12.includes("القرن") && r12.includes("الدقيقة") && r12.includes("الساعة") && r12.includes('answer:"حرف القاف"'), "r12 letter-count riddle must use the correct words and answer");
+const r1 = lines.find(line => /id:"r1"/.test(line)) || "";
+check(r1.includes("كلما خديتي منو كيكبر") && r1.includes('answer:"الحفرة"'), "r1 hole riddle must use clear, matching wording");
+const r8 = lines.find(line => /id:"r8"/.test(line)) || "";
+check(r8.includes("مدن بلا ديور") && r8.includes("طرق بلا طوموبيلات") && r8.includes('answer:"الخريطة"'), "r8 map riddle must have a clear, matching clue");
 const r11 = lines.find(line => /id:"r11"/.test(line)) || "";
 check(r11.includes("أيام وشهور") && r11.includes("التاريخ") && r11.includes('answer:"التقويم"'), "r11 calendar clue must uniquely point to calendar");
+const r12 = lines.find(line => /id:"r12"/.test(line)) || "";
+check(r12.includes("القرن") && r12.includes("الدقيقة") && r12.includes("الساعة") && r12.includes('answer:"حرف القاف"'), "r12 letter-count riddle must use the correct words and answer");
+const r13 = lines.find(line => /id:"r13"/.test(line)) || "";
+check(r13.includes("كنشعل مرة وحدة") && r13.includes('answer:"عود الكبريت"'), "r13 match riddle must clearly describe a matchstick");
 const r17 = lines.find(line => /id:"r17"/.test(line)) || "";
 check(r17.includes("العدد اللي إلا قلبتيه كيولي أكبر") && r17.includes('choices:["6","8","0","3"]') && r17.includes('answer:"6"'), "r17 inverted-number riddle must clearly ask for 6 becoming 9 when inverted");
 const r5 = lines.find(line => /id:"r5"/.test(line)) || "";
