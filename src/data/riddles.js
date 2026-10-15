@@ -12,7 +12,7 @@ export const riddles = [
   { id:"r8", type:"text", question:"شنو هو الشي اللي عندو مدينة وماعندوش دور؟", choices:["الخريطة","الكتاب","الهاتف","الحاسوب"], answer:"الخريطة", difficulty:"medium" },
   { id:"r9", type:"text", question:"كيمشي بلا رجلين وكيبكي بلا عينين، شكون أنا؟", choices:["الساعة","السحاب","الريح","النهر"], answer:"السحاب", difficulty:"hard" },
   { id:"r10", type:"text", question:"شي حاجة زادت الأرض ونقصات السما، شنو هي؟", choices:["حفرة","شجرة","بحيرة","جبل"], answer:"حفرة", difficulty:"hard" },
-  { id:"r11", type:"text", question:"عندو ورق وماشي شجرة، عندو صفحات وماشي كتاب، شنو هو؟", choices:["الدفتر","المصحف","الجريدة","التقويم"], answer:"التقويم", difficulty:"hard" },
+  { id:"r11", type:"text", question:"عندي أيام وشهور وكنوريك التاريخ، وماشي كتاب، شكون أنا؟", choices:["الدفتر","المصحف","الجريدة","التقويم"], answer:"التقويم", difficulty:"hard" },
   { id:"r12", type:"text", question:"شنو هو الحرف اللي كاين مرة فـ القرن، وجوج مرات فـ الدقيقة، وماكاينش فالساعة؟", choices:["حرف القاف","حرف الحاء","حرف الميم","حرف السين"], answer:"حرف القاف", difficulty:"hard" },
   { id:"r13", type:"text", question:"شي حاجة كتخدم غير مرة وحدة فحياتها، شنو هي؟", choices:["الكبريت","المفتاح","القلم","السكين"], answer:"الكبريت", difficulty:"medium" },
   { id:"r14", type:"text", question:"شنو هو الشي اللي عندو عين وماشوفش؟", choices:["الإبرة","العاصفة","الكاميرا","الجبل"], answer:"الإبرة", difficulty:"easy" },
