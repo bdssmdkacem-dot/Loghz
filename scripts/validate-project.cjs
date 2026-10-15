@@ -34,6 +34,8 @@ for (const line of lines) {
 }
 const r12 = lines.find(line => /id:"r12"/.test(line)) || "";
 check(r12.includes("القرن") && r12.includes("الدقيقة") && r12.includes("الساعة") && r12.includes('answer:"حرف القاف"'), "r12 letter-count riddle must use the correct words and answer");
+const r9 = lines.find(line => /id:"r9"/.test(line)) || "";
+check(r9.includes("كيبكي بلا عينين") && r9.includes('answer:"السحاب"'), "r9 walking-and-crying clue must answer cloud");
 const game = read("src/screens/GameScreen.js");
 for (const key of media) check(game.includes(JSON.stringify(key) + ":"), "Missing animal illustration mapping: " + key);
 check(game.includes("choiceCorrectText") && game.includes("choiceWrongText"), "Answer result text contrast styles are missing");

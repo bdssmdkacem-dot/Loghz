@@ -10,7 +10,7 @@ export const riddles = [
   { id:"r6", type:"text", question:"شي بيت ماعندوش أبواب ولا شبابيك، شنو هو؟", choices:["البيضة","الصندوق","الكهف","الخيمة"], answer:"البيضة", difficulty:"easy" },
   { id:"r7", type:"text", question:"كلما شربت منو، زاد عطشك... شنو هو؟", choices:["ماء البحر","الشاي","العصير","الحليب"], answer:"ماء البحر", difficulty:"medium" },
   { id:"r8", type:"text", question:"شنو هو الشي اللي عندو مدينة وماعندوش دور؟", choices:["الخريطة","الكتاب","الهاتف","الحاسوب"], answer:"الخريطة", difficulty:"medium" },
-  { id:"r9", type:"text", question:"كيمشي بلا رجلين وكيبكي بلا عينين، شكون أنا؟", choices:["الساعة","السحاب","الريح","النهر"], answer:"الساعة", difficulty:"hard" },
+  { id:"r9", type:"text", question:"كيمشي بلا رجلين وكيبكي بلا عينين، شكون أنا؟", choices:["الساعة","السحاب","الريح","النهر"], answer:"السحاب", difficulty:"hard" },
   { id:"r10", type:"text", question:"شي حاجة زادت الأرض ونقصات السما، شنو هي؟", choices:["حفرة","شجرة","بحيرة","جبل"], answer:"حفرة", difficulty:"hard" },
   { id:"r11", type:"text", question:"عندو ورق وماشي شجرة، عندو صفحات وماشي كتاب، شنو هو؟", choices:["الدفتر","المصحف","الجريدة","التقويم"], answer:"التقويم", difficulty:"hard" },
   { id:"r12", type:"text", question:"شنو هو الحرف اللي كاين مرة فـ القرن، وجوج مرات فـ الدقيقة، وماكاينش فالساعة؟", choices:["حرف القاف","حرف الحاء","حرف الميم","حرف السين"], answer:"حرف القاف", difficulty:"hard" },
