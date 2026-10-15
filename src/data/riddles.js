@@ -18,6 +18,6 @@ export const riddles = [
   { id:"r14", type:"text", question:"شنو هو الشي اللي عندو عين وماشوفش؟", choices:["الإبرة","العاصفة","الكاميرا","الجبل"], answer:"الإبرة", difficulty:"easy" },
   { id:"r15", type:"text", question:"شنو هو الشي اللي كيموت إلا شرب الماء؟", choices:["النار","الثلج","الملح","الورق"], answer:"النار", difficulty:"easy" },
   { id:"r16", type:"text", question:"عندي رجلين ومنمشيش، شكون أنا؟", choices:["الكرسي","الطاولة","السرير","الباب"], answer:"الكرسي", difficulty:"easy" },
-  { id:"r17", type:"text", question:"شنو هو الشي اللي كيكبر وهو مقلوب؟", choices:["الرقم 6 مقلوب لـ 9","الشجرة","الجبل","الظل"], answer:"الرقم 6 مقلوب لـ 9", difficulty:"hard" },
+  { id:"r17", type:"text", question:"شنو هو العدد اللي إلا قلبتيه كيولي أكبر؟", choices:["6","8","0","3"], answer:"6", difficulty:"hard" },
   { id:"r18", type:"text", question:"شحال من شهر فيه 28 يوم؟", choices:["كلهم","واحد غير","شهرين","تلاتة"], answer:"كلهم", difficulty:"medium" },
 ];
