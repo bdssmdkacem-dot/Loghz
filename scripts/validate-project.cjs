@@ -36,6 +36,8 @@ const r12 = lines.find(line => /id:"r12"/.test(line)) || "";
 check(r12.includes("القرن") && r12.includes("الدقيقة") && r12.includes("الساعة") && r12.includes('answer:"حرف القاف"'), "r12 letter-count riddle must use the correct words and answer");
 const r11 = lines.find(line => /id:"r11"/.test(line)) || "";
 check(r11.includes("أيام وشهور") && r11.includes("التاريخ") && r11.includes('answer:"التقويم"'), "r11 calendar clue must uniquely point to calendar");
+const r17 = lines.find(line => /id:"r17"/.test(line)) || "";
+check(r17.includes("العدد اللي إلا قلبتيه كيولي أكبر") && r17.includes('choices:["6","8","0","3"]') && r17.includes('answer:"6"'), "r17 inverted-number riddle must clearly ask for 6 becoming 9 when inverted");
 const r9 = lines.find(line => /id:"r9"/.test(line)) || "";
 check(r9.includes("كيبكي بلا عينين") && r9.includes('answer:"السحاب"'), "r9 walking-and-crying clue must answer cloud");
 const game = read("src/screens/GameScreen.js");
