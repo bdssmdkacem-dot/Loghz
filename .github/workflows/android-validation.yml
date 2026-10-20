@@ -1,4 +1,4 @@
-name: Android bundle validation
+name: Android bundle and APK validation
 on:
   pull_request:
     branches: [main]
@@ -20,3 +20,20 @@ jobs:
         run: npx expo config --type public
       - name: Bundle Android JavaScript
         run: npx expo export --platform android --output-dir dist
+      - name: Set up Java for Android build
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Generate native Android project
+        run: npx expo prebuild --platform android --no-install
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: loghz-debug-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
