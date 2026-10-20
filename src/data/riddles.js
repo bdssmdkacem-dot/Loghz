@@ -1,10 +1,7 @@
 export const riddles = [
   { id:"r1", type:"text", question:"شنو هو الشي اللي كلما خديتي منو كيكبر؟", choices:["الحفرة","الماء","الوقت","الرمل"], answer:"الحفرة", difficulty:"easy" },
   { id:"r2", type:"image", question:"شنو هاد الحيوان؟", media:"lion.png", choices:["أسد","نمر","فهد","ذئب"], answer:"أسد", difficulty:"easy" },
-  { id:"r19", type:"image", question:"شنو هاد الحيوان؟", media:"owl.png", choices:["بومة","غراب","نسر","حمامة"], answer:"بومة", difficulty:"easy" },
-  { id:"r20", type:"image", question:"شنو هاد الحيوان؟", media:"fox.png", choices:["ثعلب","كلب","ذئب","قط"], answer:"ثعلب", difficulty:"medium" },
-  { id:"r21", type:"image", question:"شنو هاد الحيوان؟", media:"elephant.png", choices:["فيل","خرتيت","فرس النهر","جاموس"], answer:"فيل", difficulty:"easy" },
-  { id:"r3", type:"text", question:"حيوان كيقول مياو وكيحب يلعب بالخيط، شكون هو؟", choices:["قطة","كلب","طير","بقرة"], answer:"قطة", difficulty:"medium" },
+  { id:"r3", type:"text", question:"حيوان كيقول مياو وكيحب يلعب بالخيط، شكون هو؟", choices:["قطة","كلب","طير","بقرة"], answer:"قطة", difficulty:"easy" },
   { id:"r4", type:"text", question:"شي حاجة عندها أسنان ومكتعضش، شنو هي؟", choices:["المشط","السيف","الثعبان","الكلب"], answer:"المشط", difficulty:"easy" },
   { id:"r5", type:"text", question:"كنطير بلا جناح، وكنبكي بلا عين، شكون أنا؟", choices:["السحاب","الطائرة","الطائر","الريح"], answer:"السحاب", difficulty:"medium" },
   { id:"r6", type:"text", question:"شي بيت ماعندوش أبواب ولا شبابيك، شنو هو؟", choices:["البيضة","الصندوق","الكهف","الخيمة"], answer:"البيضة", difficulty:"easy" },
@@ -20,4 +17,7 @@ export const riddles = [
   { id:"r16", type:"text", question:"عندي رجلين ومنمشيش، شكون أنا؟", choices:["الكرسي","الطاولة","السرير","الباب"], answer:"الكرسي", difficulty:"easy" },
   { id:"r17", type:"text", question:"شنو هو العدد اللي إلا قلبتيه كيولي أكبر؟", choices:["6","8","0","3"], answer:"6", difficulty:"hard" },
   { id:"r18", type:"text", question:"شحال من شهر فيه 28 يوم؟", choices:["كلهم","واحد غير","شهرين","تلاتة"], answer:"كلهم", difficulty:"medium" },
+  { id:"r19", type:"image", question:"شنو هاد الحيوان؟", media:"owl.png", choices:["بومة","غراب","نسر","حمامة"], answer:"بومة", difficulty:"easy" },
+  { id:"r20", type:"image", question:"شنو هاد الحيوان؟", media:"fox.png", choices:["ثعلب","كلب","ذئب","قط"], answer:"ثعلب", difficulty:"medium" },
+  { id:"r21", type:"image", question:"شنو هاد الحيوان؟", media:"elephant.png", choices:["فيل","خرتيت","فرس النهر","جاموس"], answer:"فيل", difficulty:"easy" },
 ];
